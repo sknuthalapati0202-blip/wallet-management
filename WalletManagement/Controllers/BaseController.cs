@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Security.Claims;
 using System.Text;
 
 namespace WalletManagement.Controllers
 {
+    [AllowAnonymous]
     public abstract class BaseController : Controller
     {
         //private readonly ILogClient _logClient;
