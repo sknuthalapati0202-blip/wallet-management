@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WalletManagement.Core.Domain.Services;
 using WalletManagement.Core.Domain.Services.Communication;
 using WalletManagement.ViewModel.WalletConfiguration;
 
 namespace WalletManagement.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     public class WalletConfigurationsController : BaseApiController
     {

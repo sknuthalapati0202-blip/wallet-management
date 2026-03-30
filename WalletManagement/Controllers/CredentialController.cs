@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WalletManagement.Core.Domain.Services;
 using WalletManagement.Core.Domain.Services.Communication;
 using WalletManagement.Core.DTOs;
@@ -8,6 +9,7 @@ using WalletManagement.Core.Utilities;
 
 namespace WalletManagement.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     public class CredentialController : BaseApiController
     {
